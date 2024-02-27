@@ -1,6 +1,6 @@
 ﻿{
-	"name": "Ani-chan Commando skin",
-    "version_number": "1.0.0",
+	"name": "AnichanCommandoSkin",
+    "version_number": "1.0.1",
     "website_url": "https://github.com/NotArme/AnichanSkin",
     "description": "Ani-chan skin for Commando",
 	"dependencies": [
