@@ -12,12 +12,13 @@ namespace AnichanSkin
     //Marks mod as client-side
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync)]
     //Adds dependency to `R2API`
-    [BepInDependency("com.bepis.r2api")]
+    [BepInDependency(LanguageAPI.PluginGUID)]
+    [BepInDependency(Skins.PluginGUID)]
     //Definition of a mod
     [BepInPlugin(
         "com.NotArme.AnichanSkin",
         "AnichanCommandoSkin",
-        "1.1.0")]
+        "1.1.1")]
 
 
     public class AnichanSkin : BaseUnityPlugin
@@ -26,7 +27,6 @@ namespace AnichanSkin
         public void Awake()
         {
 
-            //Loading AssetBundle with a model. String value is "{ProjectName}.{AssetBundleFileName}"
             using (var assetStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("AnichanSkin.anichan"))
             {
                 skinAssetBundle = AssetBundle.LoadFromStream(assetStream);
@@ -44,10 +44,10 @@ namespace AnichanSkin
             LanguageAPI.Add("ANICHAN_FURRY", "Furry Ani-chan", "en");
             LanguageAPI.Add("ANICHAN_COMMUNIST", "Communist Ani-chan", "en");
 
-            LanguageAPI.Add("ANICHAN_SKIN", "Ani-chan", "pt");
-            LanguageAPI.Add("ANICHAN_2023", "Ani-chan uniforme de 2023", "pt");
-            LanguageAPI.Add("ANICHAN_FURRY", "Ani-chan furry", "pt");
-            LanguageAPI.Add("ANICHAN_COMMUNIST", "Ani-chan comunista", "pt");
+            LanguageAPI.Add("ANICHAN_SKIN", "Ani-chan", "pt-br");
+            LanguageAPI.Add("ANICHAN_2023", "Ani-chan uniforme de 2023", "pt-br");
+            LanguageAPI.Add("ANICHAN_FURRY", "Ani-chan furry", "pt-br");
+            LanguageAPI.Add("ANICHAN_COMMUNIST", "Ani-chan comunista", "pt-br");
         }
 
         private void AddSkin()
@@ -70,7 +70,6 @@ namespace AnichanSkin
                 Array.Resize(ref skinController.skins, skinController.skins.Length + 1);
                 skinController.skins[skinController.skins.Length - 1] = Skins.CreateNewSkinDef(skin);
 
-                //Adding new skin into BodyCatalog
                 var skinsField = Reflection.GetFieldValue<SkinDef[][]>(typeof(BodyCatalog), "skins");
                 BodyCatalog.skins[(int)BodyCatalog.FindBodyIndex(bodyPrefab)] = skinController.skins;
                 Reflection.SetFieldValue(typeof(BodyCatalog), "skins", skinsField);

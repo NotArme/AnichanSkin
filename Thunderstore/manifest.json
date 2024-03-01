@@ -1,9 +1,11 @@
 ﻿{
 	"name": "AnichanCommandoSkin",
-    "version_number": "1.1.0",
+    "version_number": "1.1.1",
     "website_url": "https://github.com/NotArme/AnichanSkin",
     "description": "Ani-chan skin for Commando",
 	"dependencies": [
-		"bbepis-BepInExPack-5.4.2108"
+		"bbepis-BepInExPack-5.4.2108",
+		"RiskofThunder-R2API_Skins-1.1.0",
+		"RiskofThunder-R2API_Language-1.0.1"
 	]
 }

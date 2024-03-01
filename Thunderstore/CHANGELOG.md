@@ -8,4 +8,9 @@
 
 ## 1.1.0
 
-- added 3 new skin variations
+- Added 3 new skin variations
+
+## 1.1.1
+
+- Fixed missing R2API dependencies
+- Fixed support for brazillian portuguese
