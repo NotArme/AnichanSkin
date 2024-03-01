@@ -3,8 +3,13 @@
 Adds a low poly Ani-chan skin for Commando, based on the mascot for UFABC's anime club
 
 ## Installation
-- It's recommended to use the r2modman mod manager to download the mod from Thunderstore
-- Alternatively, the mod can be manually installed by downloading the dll file from `releases` and adding it to your plugin folder
+
+### With r2modmanager
+- Install through the manager or the [Thunderstore page](https://thunderstore.io/package/NotArme/AnichanCommandoSkin/)
+- **using r2modmanager is the recommended method since it will automatically add dependencies and check for updates**
+### Manually
+- After installing BepinEx, download the [latest release](https://github.com/NotArme/AnichanSkin/releases) and add AnichanSkin.dll to your BepinEx `plugins` folder
+- Be aware that the plugins `R2API_Skins` and `R2API_Language` are also required, they can be both found on [Thunderstore](https://thunderstore.io/package/tristanmcpherson/R2API/)
 
 ## Preview:
 
